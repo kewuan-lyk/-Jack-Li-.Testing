@@ -52,7 +52,7 @@ export function normalizeTrackMetrics(item) {
 
 export function trackIdentity(track) {
   if (track.spotifyId) return `spotify:${track.spotifyId}`;
-  return `${track.songName || ''}|${track.artist || ''}`.trim().toLowerCase();
+  return `${String(track.songName || '').trim()}|${String(track.artist || '').trim()}`.toLowerCase();
 }
 
 export function mergeTrackCollections(existing, incoming, serializeTrack = track => ({ ...track })) {
