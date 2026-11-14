@@ -1,0 +1,8 @@
+Command: node --test
+Exit code: 0
+Tests: 25 total, 25 passed, 0 failed
+
+The new test passed:
+track identity ignores surrounding whitespace in fallback fields
+
+All original 24 tests also remained green.

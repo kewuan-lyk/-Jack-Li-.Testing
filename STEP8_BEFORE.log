@@ -1,0 +1,16 @@
+Command: node --test
+Exit code: 1
+Tests: 25 total, 24 passed, 1 failed
+
+Failing test:
+track identity ignores surrounding whitespace in fallback fields
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'local demo | indie artist'
+- 'local demo|indie artist'
+             ^
+
+Location: step8.test.js:7:10
+Operator: strictEqual

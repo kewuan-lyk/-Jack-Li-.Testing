@@ -1,0 +1,13 @@
+diff --git a/testable-logic.mjs b/testable-logic.mjs
+index 474f547..061afdc 100644
+--- a/testable-logic.mjs
++++ b/testable-logic.mjs
+@@ -52,7 +52,7 @@ export function normalizeTrackMetrics(item) {
+ 
+ export function trackIdentity(track) {
+   if (track.spotifyId) return `spotify:${track.spotifyId}`;
+-  return `${track.songName || ''}|${track.artist || ''}`.trim().toLowerCase();
++  return `${String(track.songName || '').trim()}|${String(track.artist || '').trim()}`.toLowerCase();
+ }
+ 
+ export function mergeTrackCollections(existing, incoming, serializeTrack = track => ({ ...track })) {
