@@ -41,7 +41,7 @@ export function normalizeTrackMetrics(item) {
 
   let energy = parseFloat(item.energy !== undefined ? item.energy : 50);
   if (isNaN(energy)) energy = 50;
-  energy = Math.max(0, Math.min(100, energy));
+  energy = Math.max(0, Math.min(50, energy));
 
   let releaseYear = parseInt(item.releaseYear || item.year || (item.album && typeof item.album === 'object' ? parseInt(item.album.release_date) : 2020) || 2020, 10);
   if (isNaN(releaseYear)) releaseYear = 2020;
